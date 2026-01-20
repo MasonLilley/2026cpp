@@ -4,6 +4,12 @@
 
 #pragma once
 
+#include <ctre/phoenix6/swerve/SwerveModuleConstants.hpp>
+#include <ctre/phoenix6/swerve/SwerveDrivetrainConstants.hpp>
+#include <frc/geometry/Translation2d.h>
+#include <units/length.h>
+#include <units/angle.h>
+
 /**
  * The Constants header provides a convenient place for teams to hold robot-wide
  * numerical or boolean constants.  This should not be used for any other
@@ -14,8 +20,16 @@
  * they are needed.
  */
 
+using namespace ctre::phoenix6;
+
 namespace OperatorConstants {
 
 inline constexpr int kDriverControllerPort = 0;
+}
 
-}  // namespace OperatorConstants
+namespace Constants {
+    namespace Intake {
+        inline constexpr int kIntakeRollerMotorID = 0;
+        inline constexpr double kIntakeRollerSpeed = 0.5;
+    }
+}
